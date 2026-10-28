@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa & Rob — We're Getting Married!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#f4f7f4',
+                            100: '#e3eae3',
+                            200: '#ca9eca',
+                            300: '#a3b7a3',
+                            500: '#738e73',
+                            600: '#587158',
+                            700: '#465a46',
+                            800: '#3a4a3a',
+                            900: '#313e31',
+                        },
+                        rosegold: {
+                            100: '#fdf6f0',
+                            200: '#f7e7da',
+                            300: '#eac8b4',
+                            400: '#dcab93',
+                            500: '#c58b73',
+                        },
+                        gold: '#d4af37'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                        cursive: ['"Great Vibes"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        @supports (-webkit-touch-callout: none) {
+            /* iOS fixed attachment workaround */
+            .parallax {
+                background-attachment: scroll;
+            }
+        }
+        .lightbox-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-stone-50 selection:bg-rosegold-200 selection:text-sage-900">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-sm py-4">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <a href="#hero" class="font-cursive text-3xl md:text-4xl text-sage-800 hover:text-sage-600 transition">L & R</a>
+            
+            <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium text-stone-600">
+                <a href="#story" class="hover:text-sage-700 transition py-1 border-b-2 border-transparent hover:border-sage-500">Our Story</a>
+                <a href="#schedule" class="hover:text-sage-700 transition py-1 border-b-2 border-transparent hover:border-sage-500">Schedule</a>
+                <a href="#venue" class="hover:text-sage-700 transition py-1 border-b-2 border-transparent hover:border-sage-500">Venue & Travel</a>
+                <a href="#gallery" class="hover:text-sage-700 transition py-1 border-b-2 border-transparent hover:border-sage-500">Gallery</a>
+                <a href="#rsvp" class="hover:text-sage-700 transition py-1 border-b-2 border-transparent hover:border-sage-500">RSVP</a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="menu-btn" class="md:hidden text-stone-700 focus:outline-none" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg px-6 py-6 border-b border-stone-200 space-y-4 text-center text-sm tracking-widest uppercase">
+            <a href="#story" class="block py-2 text-stone-700 hover:text-sage-700 mobile-link">Our Story</a>
+            <a href="#schedule" class="block py-2 text-stone-700 hover:text-sage-700 mobile-link">Schedule</a>
+            <a href="#venue" class="block py-2 text-stone-700 hover:text-sage-700 mobile-link">Venue & Travel</a>
+            <a href="#gallery" class="block py-2 text-stone-700 hover:text-sage-700 mobile-link">Gallery</a>
+            <a href="#registry" class="block py-2 text-stone-700 hover:text-sage-700 mobile-link">Registry</a>
+            <a href="#rsvp" class="block py-2 text-stone-700 hover:text-sage-700 mobile-link text-sage-800 font-semibold">RSVP</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center text-center px-4 pt-20 pb-12 bg-cover bg-center parallax" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2000');">
+        <div class="max-w-3xl mx-auto text-white space-y-6 animate-fade-in">
+            <p class="text-xs md:text-sm tracking-[0.3em] uppercase font-light text-rosegold-200 drop-shadow">We are getting married!</p>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-normal leading-tight tracking-wide drop-shadow-md">
+                Lisa <span class="font-cursive text-rosegold-300 font-light text-6xl md:text-8xl">&amp;</span> Rob
+            </h1>
+            <p class="text-gray-600 text-sm max-w-lg mx-auto bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                Friday, 9th April, 2027 • <a href="https://www.claytonhotels.com/ballsbridge/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=gmb-hotel-homepage" target="_blank" rel="noopener noreferrer" class="hover:text-sage-700 underline underline-offset-2 transition font-medium">Clayton Hotel, Ballsbridge, Dublin, Ireland</a>
+            </p>
+
+            <!-- Countdown Timer -->
+            <div id="countdown" class="grid grid-cols-4 gap-2 md:gap-4 max-w-lg mx-auto pt-6 text-stone-900">
+                <div class="bg-white/85 backdrop-blur-sm p-3 md:p-4 rounded-lg shadow-lg">
+                    <span id="days" class="font-serif text-2xl md:text-4xl font-semibold block text-sage-800">00</span>
+                    <span class="text-[10px] md:text-xs uppercase tracking-widest text-stone-600">Days</span>
+                </div>
+                <div class="bg-white/85 backdrop-blur-sm p-3 md:p-4 rounded-lg shadow-lg">
+                    <span id="hours" class="font-serif text-2xl md:text-4xl font-semibold block text-sage-800">00</span>
+                    <span class="text-[10px] md:text-xs uppercase tracking-widest text-stone-600">Hours</span>
+                </div>
+                <div class="bg-white/85 backdrop-blur-sm p-3 md:p-4 rounded-lg shadow-lg">
+                    <span id="minutes" class="font-serif text-2xl md:text-4xl font-semibold block text-sage-800">00</span>
+                    <span class="text-[10px] md:text-xs uppercase tracking-widest text-stone-600">Mins</span>
+                </div>
+                <div class="bg-white/85 backdrop-blur-sm p-3 md:p-4 rounded-lg shadow-lg">
+                    <span id="seconds" class="font-serif text-2xl md:text-4xl font-semibold block text-sage-800">00</span>
+                    <span class="text-[10px] md:text-xs uppercase tracking-widest text-stone-600">Secs</span>
+                </div>
+            </div>
+
+            <div class="pt-8">
+                <a href="#rsvp" class="inline-block bg-sage-700 hover:bg-sage-600 text-white text-xs uppercase tracking-widest py-3 px-8 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
+                    RSVP Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story" class="py-20 md:py-28 px-6 max-w-5xl mx-auto">
+        <div class="text-center space-y-3 mb-16">
+            <span class="text-xs uppercase tracking-widest text-sage-600 font-semibold">How It All Began</span>
+            <h2 class="font-serif text-3xl md:text-5xl text-stone-800">Our Love Story</h2>
+            <div class="w-12 h-0.5 bg-rosegold-400 mx-auto mt-2"></div>
+        </div>
+
+        <div class="relative border-l-2 border-sage-200 md:border-none md:before:absolute md:before:left-1/2 md:before:top-0 md:before:bottom-0 md:before:w-0.5 md:before:bg-sage-200 space-y-12">
+            
+            <!-- Timeline Item 1 -->
+            <div class="relative pl-8 md:pl-0 md:flex md:items-center md:justify-between group">
+                <div class="absolute -left-[9px] top-1 md:static md:w-1/2 md:pr-12 md:text-right">
+                    <div class="md:hidden w-4 h-4 rounded-full bg-sage-500 border-4 border-stone-50"></div>
+                    <span class="text-xs font-semibold text-rosegold-500 tracking-wider">OCTOBER 2019</span>
+                    <h3 class="font-serif text-2xl text-stone-800 mt-1">The First Coffee</h3>
+                    <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                        A quick 30-minute coffee turned into a 4-hour chat about travel, music, and worst first dates. Neither of us wanted the evening to end.
+                    </p>
+                </div>
+                <div class="hidden md:flex items-center justify-center absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-sage-600 text-white text-xs border-4 border-stone-50 shadow">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </div>
+                <div class="hidden md:block md:w-1/2 md:pl-12">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=600" alt="Coffee date" class="w-48 h-32 object-cover rounded-lg shadow-md hover:shadow-xl transition">
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="relative pl-8 md:pl-0 md:flex md:items-center md:justify-between group">
+                <div class="hidden md:block md:w-1/2 md:pr-12 md:text-right">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=600" alt="Road trip" class="w-48 h-32 object-cover rounded-lg shadow-md hover:shadow-xl transition ml-auto">
+                </div>
+                <div class="hidden md:flex items-center justify-center absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-sage-600 text-white text-xs border-4 border-stone-50 shadow">
+                    <i class="fa-solid fa-plane"></i>
+                </div>
+                <div class="absolute -left-[9px] top-1 md:static md:w-1/2 md:pl-12">
+                    <div class="md:hidden w-4 h-4 rounded-full bg-sage-500 border-4 border-stone-50"></div>
+                    <span class="text-xs font-semibold text-rosegold-500 tracking-wider">JULY 2022</span>
+                    <h3 class="font-serif text-2xl text-stone-800 mt-1">First Big Adventure</h3>
+                    <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                        We traveled through Europe for 3 weeks with only backpacks. Surviving lost luggage and wrong turns proved we could tackle anything together.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="relative pl-8 md:pl-0 md:flex md:items-center md:justify-between group">
+                <div class="absolute -left-[9px] top-1 md:static md:w-1/2 md:pr-12 md:text-right">
+                    <div class="md:hidden w-4 h-4 rounded-full bg-sage-500 border-4 border-stone-50"></div>
+                    <span class="text-xs font-semibold text-rosegold-500 tracking-wider">DECEMBER 2025</span>
+                    <h3 class="font-serif text-2xl text-stone-800 mt-1">She Said Yes!</h3>
+                    <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                        On a quiet evening under the lights along Dublin's Grand Canal, Rob got down on one knee. Through happy tears, Lisa said YES!
+                    </p>
+                </div>
+                <div class="hidden md:flex items-center justify-center absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-rosegold-500 text-white text-xs border-4 border-stone-50 shadow">
+                    <i class="fa-solid fa-ring"></i>
+                </div>
+                <div class="hidden md:block md:w-1/2 md:pl-12">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=600" alt="Proposal" class="w-48 h-32 object-cover rounded-lg shadow-md hover:shadow-xl transition">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-20 bg-sage-50/50 border-y border-stone-200/60 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center space-y-3 mb-16">
+                <span class="text-xs uppercase tracking-widest text-sage-600 font-semibold">The Wedding Day</span>
+                <h2 class="font-serif text-3xl md:text-5xl text-stone-800">Event Schedule</h2>
+                <p class="text-stone-500 text-sm">Friday, 9th April, 2027</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-100 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-rosegold-100 text-rosegold-500 rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
+                        <i class="fa-solid fa-church"></i>
+                    </div>
+                    <span class="text-xs font-semibold text-sage-600 uppercase tracking-wider">1:30 PM</span>
+                    <h3 class="font-serif text-xl font-semibold text-stone-800 mt-1 mb-2">The Ceremony</h3>
+                    <p class="text-stone-600 text-xs leading-relaxed">
+                        Thomas Prior Hall<br>Clayton Hotel Ballsbridge<br>Please arrive 20 minutes early.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-100 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-sage-100 text-sage-600 rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
+                        <i class="fa-solid fa-wine-glass"></i>
+                    </div>
+                    <span class="text-xs font-semibold text-sage-600 uppercase tracking-wider">3:00 PM</span>
+                    <h3 class="font-serif text-xl font-semibold text-stone-800 mt-1 mb-2">Cocktail Hour</h3>
+                    <p class="text-stone-600 text-xs leading-relaxed">
+                        Hotel Courtyard &amp; Mezzanine<br>Drinks, canapés, live acoustic music, &amp; lawn games.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-100 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-rosegold-100 text-rosegold-500 rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <span class="text-xs font-semibold text-sage-600 uppercase tracking-wider">6:00 PM - LATE</span>
+                    <h3 class="font-serif text-xl font-semibold text-stone-800 mt-1 mb-2">Dinner &amp; Dancing</h3>
+                    <p class="text-stone-600 text-xs leading-relaxed">
+                        Grand Ballroom<br>Three-course dinner, toasts, and dancing until late!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue & Travel Section -->
+    <section id="venue" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="text-center space-y-3 mb-16">
+            <span class="text-xs uppercase tracking-widest text-sage-600 font-semibold">Location &amp; Stay</span>
+            <h2 class="font-serif text-3xl md:text-5xl text-stone-800">Venue &amp; Travel Info</h2>
+            <div class="w-12 h-0.5 bg-rosegold-400 mx-auto mt-2"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-block bg-sage-100 text-sage-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Historic Dublin Landmark
+                </div>
+                <h3 class="font-serif text-3xl text-stone-800">Clayton Hotel, Ballsbridge</h3>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    Set in the heart of Dublin 4, Clayton Hotel Ballsbridge combines Victorian charm with grand modern comfort. The ceremony will take place in the iconic, high-ceilinged Thomas Prior Hall.
+                </p>
+
+                <div class="border-t border-stone-200 pt-6 space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-location-dot text-sage-600 mt-1"></i>
+                        <div>
+                            <strong class="block text-xs uppercase tracking-wider text-stone-800">Address</strong>
+                            <span class="text-stone-600 text-sm">Clayton Hotel, Merrion Rd, Ballsbridge, Dublin, D04 P3C3, Ireland</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-bed text-sage-600 mt-1"></i>
+                        <div>
+                            <strong class="block text-xs uppercase tracking-wider text-stone-800">Accommodations</strong>
+                            <span class="text-stone-600 text-sm">We have reserved a block of rooms at a discounted rate. Mention <span class="font-semibold text-stone-800">LisaRob2027</span> when booking directly with the hotel.</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-plane text-sage-600 mt-1"></i>
+                        <div>
+                            <strong class="block text-xs uppercase tracking-wider text-stone-800">Nearest Airport</strong>
+                            <span class="text-stone-600 text-sm">Dublin Airport (DUB) — ~25 min taxi or direct via Aircoach Route 702 to Ballsbridge.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <a href="https://www.google.ie/maps/place/Clayton+Hotel+Ballsbridge/@53.3260026,-6.2279471,17z/data=!4m20!1m10!3m9!1s0x48670ec57aa7b09d:0x7965235d57af13f!2sClayton+Hotel+Ballsbridge!5m2!4m1!1i2!8m2!3d53.3259994!4d-6.2253722!16s%2Fg%2F1tdgp7p8!3m8!1s0x48670ec57aa7b09d:0x7965235d57af13f!5m2!4m1!1i2!8m2!3d53.3259994!4d-6.2253722!16s%2Fg%2F1tdgp7p8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-sage-700 font-semibold hover:text-sage-900 transition">
+                        <span>Open in Google Maps</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Map Iframe Embed -->
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-stone-200 h-[380px] relative">
+                <iframe class="w-full h-full border-0 filter grayscale opacity-90 hover:grayscale-0 transition-all duration-500" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.493881452187!2d-6.2279471!3d53.3260026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670ec57aa7b09d%3A0x7965235d57af13f!2sClayton%20Hotel%20Ballsbridge!5e0!3m2!1sen!2sie!4v1710000000000!5m2!1sen!2sie" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="py-20 bg-stone-100/70 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center space-y-3 mb-16">
+                <span class="text-xs uppercase tracking-widest text-sage-600 font-semibold">Memories</span>
+                <h2 class="font-serif text-3xl md:text-5xl text-stone-800">Photo Gallery</h2>
+                <p class="text-stone-500 text-sm">A glimpse into our favorite moments</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="cursor-pointer overflow-hidden rounded-lg shadow-sm hover:shadow-md transition group gallery-item" data-src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&q=80&w=1200">
+                    <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&q=80&w=600" alt="Gallery Photo 1" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="cursor-pointer overflow-hidden rounded-lg shadow-sm hover:shadow-md transition group gallery-item" data-src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=600" alt="Gallery Photo 2" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="cursor-pointer overflow-hidden rounded-lg shadow-sm hover:shadow-md transition group gallery-item" data-src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=1200">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=600" alt="Gallery Photo 3" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="cursor-pointer overflow-hidden rounded-lg shadow-sm hover:shadow-md transition group gallery-item" data-src="C:\Wedding\pictures\pic2ab.jpg">
+                    <img src="C:\Wedding\pictures\pic2ab.jpg" alt="Gallery Photo 4" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="cursor-pointer overflow-hidden rounded-lg shadow-sm hover:shadow-md transition group gallery-item" data-src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&q=80&w=1200">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&q=80&w=600" alt="Gallery Photo 5" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="cursor-pointer overflow-hidden rounded-lg shadow-sm hover:shadow-md transition group gallery-item" data-src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=1200">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=600" alt="Gallery Photo 6" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center p-4">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white text-3xl hover:text-rosegold-300 transition" aria-label="Close lightbox">&times;</button>
+        <img id="lightbox-img" src="" alt="Enlarged photo" class="max-w-full max-h-[85vh] rounded shadow-2xl object-contain">
+    </div>
+
+<!-- RSVP Section -->
+    <section id="rsvp" class="py-20 bg-sage-900 text-white px-6">  
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="space-y-3 mb-10">
+                <span class="text-xs uppercase tracking-widest text-rosegold-300 font-semibold">Will You Join Us?</span>
+                <h2 class="font-serif text-4xl md:text-5xl">RSVP</h2>
+                <p class="text-sage-200 text-xs">Please respond by March 1st, 2027</p>
+            </div>
+
+            <!-- Form pointing directly to Google Forms action URL with target to hidden iframe -->
+            <form id="rsvp-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdmjwYtRfB1f3vy1kcwe2pHieh3bVQujYWHfjH7fAXUS39G_w/formResponse" method="POST" target="hidden_iframe" class="space-y-6 text-left bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10 shadow-2xl">
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-sage-200 mb-2" for="guest-name">Full Name(s) *</label>
+                    <!-- Make sure to replace entry.XXXXX with your actual Google Form entry ID -->
+                    <input type="text" name="entry.1234567890" id="guest-name" required placeholder="e.g. Jane & John Doe" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-sm text-white placeholder-sage-300/60 focus:outline-none focus:border-rosegold-300 transition">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-sage-200 mb-2" for="attending">Attendance *</label>
+                        <select name="entry.1234567891" id="attending" required class="w-full bg-stone-800 border border-white/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-rosegold-300 transition">
+                            <option value="Joyfully Accepts">Joyfully Accepts</option>
+                            <option value="Regretfully Declines">Regretfully Declines</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-sage-200 mb-2" for="guests-count">Total Guests</label>
+                        <select name="entry.1234567892" id="guests-count" class="w-full bg-stone-800 border border-white/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-rosegold-300 transition">
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-sage-200 mb-2" for="dietary">Dietary Requirements</label>
+                    <textarea name="entry.1234567893" id="dietary" rows="3" placeholder="Vegetarian, gluten-free" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-sm text-white placeholder-sage-300/60 focus:outline-none focus:border-rosegold-300 transition"></textarea>
+                </div>
+                
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-sage-200 mb-2" for="songs">Song Requests</label>
+                    <textarea name="entry.1234567894" id="songs" rows="3" placeholder="Songs that will get you on the dance floor!" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-sm text-white placeholder-sage-300/60 focus:outline-none focus:border-rosegold-300 transition"></textarea>
+                </div>
+
+                <button type="submit" id="submit-btn" class="w-full bg-rosegold-400 hover:bg-rosegold-500 text-stone-900 font-semibold text-xs uppercase tracking-widest py-4 rounded-lg shadow-lg transition transform hover:-translate-y-0.5"> 
+                    Send Response
+                </button>
+            </form>
+            
+            <!-- Hidden iframe to capture form submission without page reload/redirect -->
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+        </div>
+    </section>
+
+    <!-- RSVP Confirmation Modal -->
+    <div id="rsvp-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white text-stone-800 p-8 rounded-2xl max-w-md w-full text-center space-y-4 shadow-2xl animate-fade-in">
+            <div class="w-16 h-16 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto text-2xl">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <h3 class="font-serif text-3xl font-semibold">Thank You!</h3>
+            <p id="modal-message" class="text-stone-600 text-sm leading-relaxed">
+                Your response has been received. We can't wait to celebrate with you!
+            </p>
+            <button id="modal-close" class="mt-4 bg-sage-700 hover:bg-sage-800 text-white text-xs uppercase tracking-widest px-6 py-3 rounded-lg transition">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-12 text-center text-xs space-y-4">
+        <p class="font-cursive text-3xl text-rosegold-300">Lisa &amp; Rob</p>
+        <p class="tracking-widest uppercase text-[10px]">April 9, 2027 • Dublin, Ireland</p>
+        <p class="text-stone-600">Made with love for our wedding guests.</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Target wedding date: April 9, 2027
+        const weddingDate = new Date('April 9, 2027 13:30:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = "<div class='col-span-4 text-center font-serif text-2xl text-white'>Today is the day!</div>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Lightbox functionality
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const src = item.getAttribute('data-src');
+                lightboxImg.src = src;
+                lightbox.classList.remove('hidden');
+                document.body.classList.add('lightbox-open');
+            });
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            document.body.classList.remove('lightbox-open');
+        }
+
+        // RSVP Form submission handler
+        const rsvpForm = document.getElementById('rsvp-form');
+        const rsvpModal = document.getElementById('rsvp-modal');
+        const modalMessage = document.getElementById('modal-message');
+        const modalClose = document.getElementById('modal-close');
+
+        rsvpForm.addEventListener('submit', () => {
+            const name = document.getElementById('guest-name').value;
+            const attending = document.getElementById('attending').value;
+
+            // Short delay to allow the background form post to clear, then show success modal
+            setTimeout(() => {
+                if (attending.includes('Accepts')) {
+                    modalMessage.innerText = `Thank you ${name}! We've recorded your RSVP and can't wait to celebrate with you at Clayton Hotel Ballsbridge on April 9th, 2027!`;
+                } else {
+                    modalMessage.innerText = `Thank you ${name} for letting us know. You will be warmly missed on our special day!`;
+                }
+
+                rsvpModal.classList.remove('hidden');
+                rsvpForm.reset();
+            }, 300);
+        });
+
+        modalClose.addEventListener('click', () => {
+            rsvpModal.classList.add('hidden');
+        });
+    </script>
+    </script>
+</body>
+</html>
